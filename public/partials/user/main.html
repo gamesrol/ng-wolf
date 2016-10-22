@@ -1,0 +1,68 @@
+<div ng-if="logg == 'login'">
+	<div class="modal-header modal-header-default">
+		<button type="button" class="close" aria-label="Close" ng-click="closeModal()"><span aria-hidden="true">&times;</span></button>
+		<h3 class="modal-title">Login</h3>
+	</div>
+	<div class="modal-body login">
+		<form class="row">
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon">@</span>
+					<input type="email" class="form-control" placeholder="E-mail" ng-model="login.email">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group input-group-lg">
+					<input type="password" class="form-control" placeholder="Password" ng-model="login.password">
+				 	<span class="input-group-btn">
+				    	<button class="btn btn-primary" type="submit" ng-click="loginUser(login)" ng-disabled="!login.email || !login.password">Go!</button>
+				  	</span>
+				</div>
+			</div>
+		</form>
+		<h4>Quick login & sign up:</h4>
+	</div>
+</div>
+
+<div ng-if="logg == 'signup'">
+	<div class="modal-header modal-header-default">
+		<button type="button" class="close" aria-label="Close" ng-click="closeModal()"><span aria-hidden="true">&times;</span></button>
+		<h3 class="modal-title">Sign up</h3>
+	</div>
+	<div class="modal-body login">
+		<form class="row">
+			<div class="col-xs-12 col-sm-12"><div class="input-group input-group-lg">
+					<span class="input-group-addon">@</span>
+					<input type="email" class="form-control" placeholder="E-mail" ng-model="register.email">
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+					<input type="password" class="form-control input-lg" placeholder="Password" ng-model="register.password">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="input-group input-group-lg">
+					<input type="password" class="form-control" placeholder="Confirm Password" ng-model="register.password2">
+				 	<span class="input-group-btn">
+				  		<button type="submit" class="btn btn-primary" ng-click="registerUser(register)" ng-disabled="!register.email || !register.password || !register.password2 || register.password != register.password2">Go!</button>
+				  	</span>
+				</div>
+			</div>
+		</form>
+		<h4>Quick login & sign up:</h4>
+	</div>
+</div>
+
+
+<div class="modal-footer">
+	<div class="col-xs-12 col-sm-12 text-center">
+		<button ng-click="clickConnect('facebook')" class="btn btn-primary"><span><i class="fa fa-facebook"></i> Facebook</button>
+		<button ng-click="clickConnect('google')" class="btn btn-danger"><i class="fa fa-google"></i> Google</button>
+		
+		<div ng-if="me">
+		    <p>Successfully connected with {{provider}}</p>
+		    <p>Hello {{me.name}}</p>
+		    <p>{{me.email}}</p>
+		    <img ng-src="{{me.avatar}}">
+		</div>
+	</div>
+</div>

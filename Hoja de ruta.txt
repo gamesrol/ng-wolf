@@ -1,0 +1,34 @@
+Carácteristicas/ Mejoras a implementar a implementar 
+
+    TAREAS:
+        
+        -COMPLEJAS:
+        
+            - Eliminar Vendor del repositorio <-----SUCCESS -----> (Quedar un dia por hangout para dejarlo subido y bien) (Daniel, Dani y Gustavo)
+            
+            - Integración de login con redes sociales usando Ouath.io (Modulo independiente) (Gustavo)
+            
+            - Testear seguridad del framework. (Alejandro)
+                -Ha pasado la primera face!!!! Va a intentar algo mas chungo... :D
+            
+            - Crear una nomemclatura para los ficheros que evite los ficheros con nombres duplicados   (Todos)
+                - PROPUESTA -> Juntar todos los js de un controlador en un fichero de nombre <nombremodelo>controller.js   
+                
+            - Generar formularios acordes al tipo de cada campo del modelo.  (Daniel)
+            
+            - include de php -> usar PS-4 (Daniel y Gustavo)
+        
+        -PHP:
+            -Mejorar function print_s() (Imprimir arrays de forma visible)
+            
+            -Mejorar posicion de la llamada al compilador de less (solo cuando se carga el layaout..)
+        -JS:
+            -Ver sistemas de alertas en angular(Para colorear la consola)
+
+    BUGS:
+
+
+    IDEAS:
+    
+        - Modulo para google maps.
+

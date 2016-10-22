@@ -1,0 +1,65 @@
+<div class="weather container">
+	<form class="col-xs-6 col-xs-offset-3">
+		<h3 ng-if="!personal.id">Create personal</h3><h3 ng-if="personal.id">Edit personal</h3>
+			<div class="form-group">
+				<input type="number" class="form-control" placeholder="Candidate_id" ng-model="personal.candidate_id" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Title" ng-model="personal.title" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Name" ng-model="personal.name" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Surname" ng-model="personal.surname" >
+			</div>
+
+			<div class="col-sm-6" class="form-control">
+				<div class="label label-default" ngf-select="upload(file)" ngf-drop="upload(file)" ng-model="file"
+					ngf-pattern="image/*" accept="image/*" ngf-max-size="20MB" ngf-min-height="100"
+					ngf-drag-over-class="{accept:'label-success', reject:'label-danger', delay:100}"
+					ngf-allow-dir="allowDir">
+					<img ng-if="user.img" ng-src="{{user.img}}" class="img-circle">
+					<span>Drop an image or click to browse</span>
+				</div>
+				<progressbar ng-if="progressPercentage != 0" class="progress-striped active" max="100" value="progressPercentage"><i>{{progressPercentage}}%</i></progressbar>
+			</div>
+
+			<div class="form-group">
+				<input type="date" class="form-control" placeholder="DateBirth" ng-model="personal.dateBirth" >
+			</div>
+
+			<div class="form-group">
+				<input type="number" class="form-control" placeholder="PhoneNumber" ng-model="personal.phoneNumber" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Address" ng-model="personal.address" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="PostalCode" ng-model="personal.postalCode" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="City" ng-model="personal.city" >
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Country" ng-model="personal.country" >
+			</div>
+
+			<div class="form-group">
+				<textarea class="form-control" placeholder="Summary" ng-model="personal.summary" ></textarea>
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Linkedin" ng-model="personal.linkedin" >
+			</div>
+
+		<input type="submit" class="btn btn-info pull-right" value="send" ng-click="createPersonal(personal)">
+	</form>
+</div>

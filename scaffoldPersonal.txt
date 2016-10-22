@@ -1,0 +1,1 @@
+php sobic create scaffold personals "integer('candidate_id')->unique()->unsigned()" "string('title')" "string('name')" "string('surname')" "date('dateBirth')" "integer('phoneNumber')" "string('address')" "string('postalCode')" "string('city')" "string('country')" "text('summary')" "string('linkedin')"

@@ -1,0 +1,83 @@
+<div id="gui" class="container hidden-xs">
+  <div class="col-sx-3 col-sm-3">
+    <h4>Translate</h4>
+    <strong>X</strong>:{{t.x}}
+    <strong>Y</strong>:{{t.y}}
+    <strong>Z</strong>:{{t.z}}
+    <br/><br/>
+    <audio controls autoplay loop>
+      <source src="sound/music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div class="col-sx-3 col-sm-3">
+    <h4>Rotate</h4>
+    <strong>X</strong>:{{r.x}}
+    <strong>Y</strong>:{{r.y}}
+    <strong>Z</strong>:{{r.z}}
+  </div>
+  <div class="col-sx-3 col-sm-3">
+    <h4>Autoplay</h4>
+      <button class="btn" ng-click="playStop()" ng-class="{'btn-danger': play, 'btn-success': !play}">
+        <span ng-if="!play"><i class="fa fa-play"></i> Play</span>
+        <span ng-if="play"><i class="fa fa-stop"></i> Stop</span>
+      </button>
+  </div>
+  <div class="col-sx-3 col-sm-3">
+      <h4>Keys</h4>
+      <ul>
+          <li>
+            Move: Cursor
+          </li>
+          <li>
+            Up/Down: A/Z
+          </li>
+          <li>
+            Give: Q/W
+          </li>
+      </ul>
+  </div>
+</div>
+<section class="container-fluid container-view">
+  <div id="carousel" style="transform: rotateX({{r.x}}deg) rotateY({{r.y}}deg) rotateZ({{r.z}}deg);" >
+    <div id="map" style="transform: translateX({{t.x}}px) translateY({{t.y}}px) translateZ({{t.z}}px);">
+      <figure>1</figure>
+      <figure>2</figure>
+      <figure>3</figure>
+      <figure>4</figure>
+      <figure>5</figure>
+      <figure>6</figure>
+      <figure>7</figure>
+      <figure>8</figure>
+      <figure>9</figure>
+      <figure>10</figure>
+      <figure>11</figure>
+      <figure>12</figure>
+      <figure>13</figure>
+      <figure>14</figure>
+      <figure>15</figure>
+      <figure>16</figure>
+      <figure>17</figure>
+      <figure>18</figure>
+      <figure>19</figure>
+      <figure>20</figure>
+      <figure>21</figure>
+      <figure>22</figure>
+      <figure>23</figure>
+      <figure>24</figure>
+      <figure>25</figure>
+      <figure>26</figure>
+      <figure>27</figure>
+      <figure>28</figure>
+      <figure>29</figure>
+      
+      
+      <figure id="pika" style="transform: translateX({{pika}}px) translateY(50px) translateZ(-240px);"></figure>
+      <figure id="smoke"></figure>
+      <figure id="cthulu"></figure>
+      <figure id="bob"></figure>
+      <figure id="termi"></figure>
+      <figure ng-if="t.z> 800" id="portal"></figure>
+    </div>
+  </div>
+</section>9
