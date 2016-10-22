@@ -5,11 +5,13 @@ Lo publico para que a quien le valga, pero me debe minimo una cerveza..
 
 Cuando tenga tiempo le quito el php, que no es necesario..
 
-Revisando c9.io, vi estoy que hice con sobic para llevarlo al limite.
-La idea es basica es hacer una version de raycast usando html y divs.
+Revisando c9.io, vi esto. Que hice con sobic para llevarlo al limite.
+La idea es basica es hacer una version de raycast(wold3d) usando html y divs.
 Esta demo lo mantine. Con vario personajes en juego.
 
 Espero tambien porner esto algun dia en englis.
+
+
 Este codijo lo escribi gracias a una cerveza.
 
 /*
